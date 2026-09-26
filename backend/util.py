@@ -404,7 +404,6 @@ class RingBuffer:
             self._items.append(item)
             if len(self._items) > self._maxlen:
                 self._items = self._items[-self._maxlen:]
-                self._seq = 0
             return self._seq
 
     def items(self, since_seq=0, limit=200):
